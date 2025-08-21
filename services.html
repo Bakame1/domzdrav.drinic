@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bs" data-lang="bs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Usluge | Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="index.html" aria-label="Home">
+      <div class="logo" aria-hidden="true">🩺</div>
+      <div class="brand-text">
+        <strong class="lang lang-bs">Dom zdravlja [NAZIV]</strong>
+        <strong class="lang lang-en">Medical Centre [NAME]</strong>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="lang lang-bs">Početna</span><span class="lang lang-en">Home</span></a>
+      <a href="about.html"><span class="lang lang-bs">O nama</span><span class="lang lang-en">About</span></a>
+      <a class="active" href="services.html"><span class="lang lang-bs">Usluge</span><span class="lang lang-en">Services</span></a>
+      <a href="contact.html"><span class="lang lang-bs">Kontakt</span><span class="lang lang-en">Contact</span></a>
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button class="btn" data-setlang="bs" aria-pressed="true">BS/HR/SR</button>
+        <button class="btn" data-setlang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container stack-lg">
+    <section class="card">
+      <h1 class="lang lang-bs">Usluge</h1>
+      <h1 class="lang lang-en">Services</h1>
+      <ul class="service-list">
+        <li>
+          <strong class="lang lang-bs">Opšta medicina</strong>
+          <strong class="lang lang-en">General practice</strong>
+          <p class="muted lang lang-bs">Pregledi, savjetovanje, recepti.</p>
+          <p class="muted lang lang-en">Check-ups, consultations, prescriptions.</p>
+        </li>
+        <li>
+          <strong class="lang lang-bs">Vakcinacija</strong>
+          <strong class="lang lang-en">Vaccination</strong>
+          <p class="muted lang lang-bs">Redovni programi i sezonske vakcine.</p>
+          <p class="muted lang lang-en">Routine programs and seasonal vaccines.</p>
+        </li>
+        <li>
+          <strong class="lang lang-bs">Laboratorijske analize</strong>
+          <strong class="lang lang-en">Laboratory tests</strong>
+          <p class="muted lang lang-bs">Osnovni testovi krvi i urina.</p>
+          <p class="muted lang lang-en">Basic blood and urine tests.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="lang lang-bs">Radno vrijeme</h2>
+      <h2 class="lang lang-en">Opening hours</h2>
+      <ul class="hours">
+        <li><span class="lang lang-bs">Ponedjeljak–Petak:</span><span class="lang lang-en">Monday–Friday:</span> 08:00–17:00</li>
+        <li><span class="lang lang-bs">Subota:</span><span class="lang lang-en">Saturday:</span> 09:00–13:00</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small class="muted">© <span id="year"></span> <span class="lang lang-bs">Dom zdravlja [NAZIV]</span><span class="lang lang-en">Medical Centre [NAME]</span>.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

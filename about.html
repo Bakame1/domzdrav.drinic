@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bs" data-lang="bs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O nama | About</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="index.html" aria-label="Home">
+      <div class="logo" aria-hidden="true">🩺</div>
+      <div class="brand-text">
+        <strong class="lang lang-bs">Dom zdravlja [NAZIV]</strong>
+        <strong class="lang lang-en">Medical Centre [NAME]</strong>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="lang lang-bs">Početna</span><span class="lang lang-en">Home</span></a>
+      <a class="active" href="about.html"><span class="lang lang-bs">O nama</span><span class="lang lang-en">About</span></a>
+      <a href="services.html"><span class="lang lang-bs">Usluge</span><span class="lang lang-en">Services</span></a>
+      <a href="contact.html"><span class="lang lang-bs">Kontakt</span><span class="lang lang-en">Contact</span></a>
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button class="btn" data-setlang="bs" aria-pressed="true">BS/HR/SR</button>
+        <button class="btn" data-setlang="en">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container stack-lg">
+    <section class="card">
+      <h1 class="lang lang-bs">O nama</h1>
+      <h1 class="lang lang-en">About us</h1>
+      <p class="lang lang-bs">Naš tim pruža primarnu zdravstvenu zaštitu sa fokusom na prevenciju, ranu dijagnostiku i personaliziran pristup svakom pacijentu.</p>
+      <p class="lang lang-en">Our team provides primary healthcare with a focus on prevention, early diagnosis, and personalized care for every patient.</p>
+    </section>
+
+    <section class="grid-2 card">
+      <div>
+        <h2 class="lang lang-bs">Doktor</h2>
+        <h2 class="lang lang-en">Physician</h2>
+        <ul>
+          <li class="lang lang-bs">Ime i prezime, specijalizacija</li>
+          <li class="lang lang-en">Full name, specialization</li>
+          <li class="lang lang-bs">Iskustvo: 10+ godina</li>
+          <li class="lang lang-en">Experience: 10+ years</li>
+          <li class="lang lang-bs">Član relevantnih profesionalnih udruženja</li>
+          <li class="lang lang-en">Member of relevant professional associations</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="lang lang-bs">Vrijednosti</h2>
+        <h2 class="lang lang-en">Values</h2>
+        <p class="lang lang-bs">Empatija, jasnoća informacija, poštovanje vremena pacijenta.</p>
+        <p class="lang lang-en">Empathy, clear information, and respect for patients' time.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <small class="muted">© <span id="year"></span> <span class="lang lang-bs">Dom zdravlja [NAZIV]</span><span class="lang lang-en">Medical Centre [NAME]</span>.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

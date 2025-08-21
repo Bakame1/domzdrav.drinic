@@ -1,0 +1,55 @@
+:root{
+    --bg:#ffffff; --fg:#111827; --muted:#6b7280; --primary:#0ea5e9; --card:#f9fafb; --border:#e5e7eb;
+    --radius:16px; --space:16px; --space-lg:28px; --max:980px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.5;color:var(--fg);background:var(--bg)}
+  .container{max-width:var(--max);margin-inline:auto;padding:0 var(--space)}
+  .stack-lg>*{margin-block:var(--space-lg)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-lg)}
+  
+  .site-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space)}
+  .brand{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+  .logo{font-size:32px}
+  .brand-text{display:flex;flex-direction:column}
+  
+  .nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .nav a{padding:8px 12px;border-radius:12px;text-decoration:none;color:inherit}
+  .nav a.active, .nav a:hover{background:#eef6ff}
+  .lang-switch{display:flex;gap:6px;margin-left:6px}
+  .btn{appearance:none;border:1px solid var(--border);background:#fff;padding:8px 10px;border-radius:12px;cursor:pointer}
+  .btn.primary{background:var(--primary);color:white;border-color:transparent}
+  .btn:focus{outline:2px solid var(--primary);outline-offset:2px}
+  
+  .hero .lead{margin-top:4px;color:var(--muted)}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--space)}
+  .hours{padding-left:18px}
+  .service-list{display:grid;gap:14px;padding-left:0;list-style:none}
+  .service-list li{padding:12px;border:1px solid var(--border);border-radius:12px;background:#fff}
+  
+  .map-wrap{position:relative;aspect-ratio:16/9;width:100%}
+  .map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  
+  .site-footer{padding:24px 0}
+  .muted{color:var(--muted)}
+  
+  /* Language visibility */
+  .lang{display:inline}
+  html[data-lang="bs"] .lang-en{display:none}
+  html[data-lang="en"] .lang-bs{display:none}
+  
+  /* Responsive */
+  @media (max-width: 800px){
+    .grid-2{grid-template-columns:1fr}
+  }
+
+  img {
+
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
