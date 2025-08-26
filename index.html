@@ -20,40 +20,77 @@
       </div>
     </a>
     <nav class="nav">
-      <a href="index.html" class="active"><span class="lang lang-bs">Početna</span><span class="lang lang-en">Home</span></a>
+      <a class="active" href="index.html"><span class="lang lang-bs">Početna</span><span class="lang lang-en">Home</span></a>
       <a href="about.html"><span class="lang lang-bs">O nama</span><span class="lang lang-en">About</span></a>
       <a href="services.html"><span class="lang lang-bs">Usluge</span><span class="lang lang-en">Services</span></a>
-      <a href="contact.html"><span class="lang lang-bs">Kontakt</span><span class="lang lang-en">Contact</span></a>
-      <div class="lang-switch" role="group" aria-label="Language switch">
-        <button class="btn" data-setlang="bs" aria-pressed="true">BS/HR/SR</button>
-        <button class="btn" data-setlang="en">EN</button>
-      </div>
+      <a href="contact.html"><span class="lang lang-bs">Kontakt</span><span class="lang lang-en">Contact</span></a>      
+      
+      <a href="index_eng.html" class="translate_in_eng_or_bs">
+        <i class="flag-icon">🇬🇧</i>Translate in English
+      </a>
     </nav>
   </header>
 
   <main class="container stack-lg">
     <section class="hero card">
-      <h1 class="lang lang-bs">Dobrodošli u Dom zdravlja Drinić</h1>
-      <h1 class="lang lang-en">Welcome to Medical Centre Drinić</h1>
-      <img src="image.jpg" alt="dom zdravlja">
+      <h1 class="lang lang-bs" id="Welcome">Dobrodošli u Dom zdravlja Drinić</h1>
+      <h1 class="lang lang-en" id="Welcome">Welcome to Medical Centre Drinić</h1>
     </section>
 
     <section class="grid-2 card">
       <div>
         <h2 class="lang lang-bs">Radno vrijeme</h2>
         <h2 class="lang lang-en">Opening hours</h2>
-        <ul class="hours">
-          <li><span class="lang lang-bs">Ponedjeljak–Petak:</span><span class="lang lang-en">Monday–Friday:</span> 08:00–17:00</li>
-          <li><span class="lang lang-bs">Subota:</span><span class="lang lang-en">Saturday:</span> 09:00–13:00</li>
-          <li><span class="lang lang-bs">Nedjelja:</span><span class="lang lang-en">Sunday:</span> <span class="lang lang-bs">Zatvoreno</span><span class="lang lang-en">Closed</span></li>
-        </ul>
+        
+        <p>
+          <strong class="lang lang-bs">Laboraorija i ambulanta porodične medicine :</strong>
+          <strong class="lang lang-en">Laboratory and Family Medicine Clinic:</strong><br />
+          <span class="lang lang-bs">
+          => Svaki radni dan : 7:00 - 15:00 
+          </span>
+          <span class="lang lang-en">
+          => Every working day: 7:00 AM - 3:00 PM
+          </span>
+        </p>
+
+        <p>
+          <strong class="lang lang-bs">Hitna medicinska pomoć :</strong>
+          <strong class="lang lang-en"> Emergency Medical Assistance:</strong><br />
+          
+          <span class="lang lang-bs">
+          => Radni dan : 15:00 - 7:00 <br/>
+          => Vikendi i praznici : 24h/24h<br/>
+          </span>
+          <span class="lang lang-en">
+          => Working days: 3:00 PM - 7:00 AM<br/>
+          => Weekends and holidays: 24/24<br/>
+          </span>
+        </p>
+
+        <p>
+          <strong class="lang lang-bs">Stomatološka ambulanta :</strong>
+          <strong class="lang lang-en">Stomatology Clinic:</strong><br />
+          
+          <span class="lang lang-bs">
+          => subotu : 8:00 - 15:00
+          </span>
+          <span class="lang lang-en">
+          => Saturday: 8:00 AM - 3:00 PM
+          </span>
+        </p>
+
+          
+          
+            
+          
+        
       </div>
       <div>
         <h2 class="lang lang-bs">Adresa</h2>
         <h2 class="lang lang-en">Address</h2>
         <p>
-          <span class="lang lang-bs">Ulica i broj, Grad, Bosna i Hercegovina</span>
-          <span class="lang lang-en">Street and number, City, Bosnia and Herzegovina</span>
+          <span class="lang lang-bs">Centar 15, Drinić, Bosna i Hercegovina</span>
+          <span class="lang lang-en">Centar 15, Drinić, Bosnia and Herzegovina</span>
         </p>
       </div>
     </section>
@@ -61,7 +98,6 @@
     <section id="map" class="card">
       <h2 class="lang lang-bs">Lokacija</h2>
       <h2 class="lang lang-en">Location</h2>
-      <!-- Replace the src with your Maps Embed URL or simple embed share code -->
       <div class="map-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30490.2373747614!2d16.444908968033257!3d44.50621079407327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4760f3c82a17f0cf%3A0xfedbb682baba666b!2sDom%20zdravlja%20Drini%C4%87!5e0!3m2!1sfr!2sba!4v1755786088622!5m2!1sfr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -69,7 +105,13 @@
   </main>
 
   <footer class="site-footer container">
-    <small class="muted">© <span id="year"></span> <span class="lang lang-bs">Dom zdravlja [NAZIV]</span><span class="lang lang-en">Medical Centre [NAME]</span>. <span class="lang lang-bs">Sva prava zadržana.</span><span class="lang lang-en">All rights reserved.</span></small>
+    <small class="muted">© <span id="year"></span> 
+      <span class="lang lang-bs">Dom zdravlja Drinić</span>
+      <span class="lang lang-en">Medical Centre Drinić</span>. 
+      
+      <span class="lang lang-bs">Sva prava zadržana.</span>
+      <span class="lang lang-en">All rights reserved.</span>
+    </small>
   </footer>
 
   <script src="script.js"></script>
