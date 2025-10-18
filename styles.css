@@ -3,11 +3,11 @@
   --bg: #F4FAFF;
   --fg: #111827;
   --primary: #0ea5e9;
-  --border: #e5e7eb;
+  --border: #113264;
   --radius: 16px;
   --space: 16px;
   --space-lg: 28px;
-  --max: 980px;
+  --max: 70%;
   --header-height: 20%;
 
   --color_text : #113264;
@@ -29,18 +29,18 @@
       --bg: #000000;
       --fg: #C2E6FF;
       --primary: #0ea5e9;
-      --border: #e5e7eb;
+      --border: #205D9E;
       --radius: 16px;
       --space: 16px;
       --space-lg: 28px;
-      --max: 980px;
+      --max: 70%;
       --header-height: 20%;
 
 
       --color_text : #C2E6FF;
       --color_text_2 : #70B8FF;
       --color_text_3 :  #3B9EFF;
-      --color_hover_nav_a : #205D9E;
+      --color_hover_nav_a : #0D2847;
 
       --back_col:#111927;
       --section_col: #003362;
@@ -165,13 +165,12 @@ p strong {
   color: inherit;
   font-size: 22px;
   transition: background 0.2s ease;
-  
 }
 
 .nav a.active,
 .nav a:hover {
   background-color: var(--color_hover_nav_a);
-  border: 1px solid var(--fg); /* épaisseur | style | couleur */
+  border: 1px solid var(--fg);
 }
 
 
@@ -180,8 +179,9 @@ p strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px; /* Espace entre le drapeau et le texte */
   padding: 12px 20px;
-  background-color: var(--color_hover_nav_a); 
+  background-color: var(--bg_link_btn); 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -191,21 +191,24 @@ p strong {
   font-size: 18px;
 }
 
-.translate_in_eng_or_bs:hover a{
-  background-color: #3367d6; /* Bleu plus foncé au survol */
+.translate_in_eng_or_bs:hover {
+  background-color: #3367d6;
 }
 
-
-.translate_in_eng_or_bs:hover .flag-icon {
-  transform: rotate(360deg); /* Rotation complète au survol */
-}
-
-img.flag-icon {
-  width: 30px;
-  height: 10px;
+.translate_in_eng_or_bs .flag-icon {
+  width: 60px;
+  height: 40px; 
   display: inline-block;
   vertical-align: middle;
+  
+  transition: transform 0.3s ease;
 }
+
+.translate_in_eng_or_bs:hover .flag-icon {
+  transform: rotate(360deg);
+}
+
+
 
 
 /* ===== Facebook Button ===== */
@@ -221,7 +224,7 @@ img.flag-icon {
   font-family: Arial, sans-serif;
   transition: all 0.3s ease;
   font-size: 18px;
-  width: 100%;
+  width: 60%;
   box-sizing: border-box;
 }
 
@@ -287,6 +290,8 @@ img.flag-icon {
   margin-top: 8px;
 }
 
+
+
 /* ===== Map ===== */
 .map-wrap {
   position: relative;
@@ -332,6 +337,14 @@ img.flag-icon {
   margin: 10px 0;
   padding: 16px 24px;
 }
+
+.contact-list {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin: auto;
+  width: 100%;
+}
+
 
 /* ===== Footer ===== */
 .site-footer {
