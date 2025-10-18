@@ -1,6 +1,6 @@
 /* ===== Variables & Reset ===== */
 :root {
-  --bg: #ffffff;
+  --bg: #F4FAFF;
   --fg: #111827;
   --primary: #0ea5e9;
   --border: #e5e7eb;
@@ -10,24 +10,24 @@
   --max: 980px;
   --header-height: 20%;
 
-  --color_text : #111827;
-  --color_text_2 : #008573;
-  --color_hover_nav_a : #53B9AB;
+  --color_text : #113264;
+  --color_text_2 : #0D74CE;
   
-  --back_col:#F3FBF9;
-  --section_col: #E0F8F3;
-  --back_service_list : #B8EAE0;
+  --color_hover_nav_a : #ACD8FC;
   
+  --back_col:#F4FAFF;
+  --section_col: #D5EFFF;
+  --back_service_list : #ACD8FC;
 
+  --bg_link_btn: #ACD8FC;
+  
 }
-
-
 
 /* Respecte les préférences système */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
       --bg: #000000;
-      --fg: #ffffff;
+      --fg: #C2E6FF;
       --primary: #0ea5e9;
       --border: #e5e7eb;
       --radius: 16px;
@@ -37,14 +37,17 @@
       --header-height: 20%;
 
 
-      --color_text : #ADF0D4;
-      --color_text_2 : #0BD8B6;
-      --color_text_3 :  #0EB39E;
-      --color_hover_nav_a : #023B37;
+      --color_text : #C2E6FF;
+      --color_text_2 : #70B8FF;
+      --color_text_3 :  #3B9EFF;
+      --color_hover_nav_a : #205D9E;
 
-      --back_col:#111C1B;
-      --section_col: #207E73;
-      --back_service_list:#084843 ;
+      --back_col:#111927;
+      --section_col: #003362;
+      --back_service_list:#205D9E ;
+
+      --bg_link_btn: #205D9E;
+      --border-color: #205D9E;
   }
 }
 
@@ -62,7 +65,8 @@ html, body {
 
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--color_text);
   background: var(--back_col);
 
@@ -72,6 +76,22 @@ body {
 
 p strong,h1,h2{
   color : var(--fg)
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+}
+
+p strong {
+  font-size: 20px;
 }
 
 /* ===== Layout ===== */
@@ -121,6 +141,14 @@ p strong,h1,h2{
   gap: 4px;
 }
 
+.brand-text strong {
+  font-size: 24px;
+}
+
+.brand-text span {
+  font-size: 18px;
+}
+
 /* ===== Navigation ===== */
 .nav {
   display: flex;
@@ -135,7 +163,7 @@ p strong,h1,h2{
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  font-size: 20px;
+  font-size: 22px;
   transition: background 0.2s ease;
   
 }
@@ -152,24 +180,19 @@ p strong,h1,h2{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  background-color: #4285f4; /* Bleu clair pour l'anglais */
+  padding: 12px 20px;
+  background-color: var(--color_hover_nav_a); 
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-family: Helvetica, sans-serif;
   transition: all 0.3s ease;
   margin-left: 8px;
+  font-size: 18px;
 }
 
 .translate_in_eng_or_bs:hover a{
   background-color: #3367d6; /* Bleu plus foncé au survol */
-}
-
-.translate_in_eng_or_bs .flag-icon {
-  margin-right: 8px;
-  font-size: 1.1em;
-  transition: transform 0.3s ease;
 }
 
 
@@ -177,31 +200,29 @@ p strong,h1,h2{
   transform: rotate(360deg); /* Rotation complète au survol */
 }
 
-/* ===== Buttons ===== */
-.change_lang_btn{
-  appearance: none;
-  border: 1px solid var(--border);
-  background: #f16767;
-  border-radius: 12px;
+img.flag-icon {
+  width: 30px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.btn:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
 
 /* ===== Facebook Button ===== */
 .facebook-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 16px 24px;
   background-color: #3b5998;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   font-family: Arial, sans-serif;
   transition: all 0.3s ease;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .facebook-button:hover {
@@ -233,8 +254,12 @@ p strong,h1,h2{
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space);
-  width: 80%;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+  justify-content: center;
 }
 
 
@@ -247,10 +272,19 @@ p strong,h1,h2{
 }
 
 .service-list li {
-  padding: 12px;
+  padding: 16px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--back_service_list);
+}
+
+.service-list li strong {
+  font-size: 22px;
+}
+
+.service-list li p {
+  font-size: 18px;
+  margin-top: 8px;
 }
 
 /* ===== Map ===== */
@@ -266,6 +300,37 @@ p strong,h1,h2{
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* ===== Contact Page Specific ===== */
+.contact.grid-2 {
+  align-items: start;
+  margin: 0 auto;
+  gap: var(--space-lg);
+}
+
+.contact.grid-2 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.contact.grid-2 p {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact.grid-2 .facebook-button {
+  width: 100%;
+  max-width: none;
+  margin: 10px 0;
+  padding: 16px 24px;
 }
 
 /* ===== Footer ===== */
@@ -309,7 +374,41 @@ img {
 }
 
 section.grid-2.card {
-  margin: 0 auto;   /* centre horizontalement */
+  margin: 0 auto;  
 
 }
 
+.link-btn {
+  color:  var(--text-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  background: var(--bg_link_btn);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(4px);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  margin: 8px ;
+  font-size: 18px;
+}
+.link-btn:focus { outline: 4px solid var(--text-base); }
+.link-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.link-btn:hover .icon { transform: rotate(360deg); }
