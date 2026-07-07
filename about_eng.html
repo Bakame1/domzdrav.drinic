@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | O nama</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -19,7 +23,10 @@
       <a href="index_eng.html"><span class="lang lang-en">Home</span></a>
       <a class="active" href="about_eng.html"><span class="lang lang-en">About us</span></a>
       <a href="services_eng.html"><span class="lang lang-en">Services</span></a>
-      <a href="contact_eng.html"><span class="lang lang-en">Contact</span></a>     
+      <a href="contact_eng.html"><span class="lang lang-en">Contact</span></a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="about.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/1920px-Flag_of_Bosnia_and_Herzegovina.svg.png"  >
@@ -28,33 +35,29 @@
     </nav>
   </header>
 
-
   <main class="container stack-lg">
-    <section class="card">
+    <section class="card fade-in">
       <h1 class="lang lang-en">About us</h1>
 
-
       <p class="lang lang-en">The Public Health Center Drinić (JZU DZ Drinić) was established in 2000, in the newly formed municipality of Petrovac, with its headquarters in Drinić.</p>
-      
-      <p class="lang lang-en">Since its establishment, it has provided primary health care coverage for the area of the municipality of Petrovac and parts of the surrounding municipalities of Bosanski Petrovac and Drvar.</p>
 
+      <p class="lang lang-en">Since its establishment, it has provided primary health care coverage for the area of the municipality of Petrovac and parts of the surrounding municipalities of Bosanski Petrovac and Drvar.</p>
 
       <p class="lang lang-en">There is one registered family medicine team with approximately 1,900 primary health care users.</p>
 
-
       <p class="lang lang-en">The institution employs 8 workers who work in the family medicine clinic, laboratory, dentistry, economic and financial affairs, as well as in the technical service.</p>
-
 
       <img src="domZ.jpg" alt="medical centre">
     </section>
   </main>
 
-
   <footer class="site-footer container">
-    <small class="muted">© <span id="year"></span> 
+    <small class="muted">© <span id="year"></span>
       <span class="lang lang-en">Drinić Medical Centre</span>
     </small>
   </footer>
-  
+
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

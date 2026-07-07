@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Usluge | Services</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -20,7 +24,9 @@
       <a href="about.html"><span class="lang lang-bs">O nama</span></a>
       <a class="active" href="services.html"><span class="lang lang-bs">Usluge</span></a>
       <a href="contact.html"><span class="lang lang-bs">Kontakt</span></a>
-      
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="services_eng.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"  >
@@ -30,31 +36,31 @@
   </header>
 
   <main class="container stack-lg">
-    <section class="card">
+    <section class="card fade-in">
       <h1 class="lang lang-bs">Usluge</h1>
       <ul class="service-list">
         <li>
-          <strong class="lang lang-bs">Opšta medicina</strong>
+          <strong class="lang lang-bs">🩺 Opšta medicina</strong>
           <p class="muted lang lang-bs">Sve usluge Porodicne medicine</p>
         </li>
         <li>
-          <strong class="lang lang-bs">Vakcinacija</strong>
+          <strong class="lang lang-bs">💉 Vakcinacija</strong>
           <p class="muted lang lang-bs">Djeca i odrasli</p>
         </li>
         <li>
-          <strong class="lang lang-bs">Laboratorijska dijagnostika</strong>
+          <strong class="lang lang-bs">🔬 Laboratorijska dijagnostika</strong>
           <p class="muted lang lang-bs">Hematološka i Biohemijska</p>
         </li>
         <li>
-          <strong class="lang lang-bs">Ultrazvučni pregledi</strong>
+          <strong class="lang lang-bs">📡 Ultrazvučni pregledi</strong>
           <p class="muted lang lang-bs">Abdomena i Štitne žlijezde</p>
         </li>
         <li>
-          <strong class="lang lang-bs">Usluge opšte stomatologije</strong>
+          <strong class="lang lang-bs">🦷 Usluge opšte stomatologije</strong>
           <p class="muted lang lang-bs">Preventiva, dijagnostika i liječenje zuba</p>
         </li>
         <li>
-          <strong class="lang lang-bs">Usluge hitne medicinske pomoći i sanitetski prevoz</strong>
+          <strong class="lang lang-bs">🚑 Usluge hitne medicinske pomoći i sanitetski prevoz</strong>
           <p class="muted lang lang-bs">Hitna pomoć i transport pacijenata</p>
         </li>
 
@@ -64,8 +70,11 @@
   </main>
 
   <footer class="site-footer container">
-    <small class="muted">© 
+    <small class="muted">©
       <span id="year"></span> <span class="lang lang-bs">Dom zdravlja Drinić</span>.</small>
   </footer>
+
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

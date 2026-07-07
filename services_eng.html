@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Usluge</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -20,7 +24,9 @@
       <a href="about_eng.html"><span class="lang lang-en">About us</span></a>
       <a class="active" href="services_eng.html"><span class="lang lang-en">Services</span></a>
       <a href="contact_eng.html"><span class="lang lang-en">Contact</span></a>
-      
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="services.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/1920px-Flag_of_Bosnia_and_Herzegovina.svg.png"  >
@@ -29,47 +35,46 @@
     </nav>
   </header>
 
-
   <main class="container stack-lg">
-    <section class="card">
+    <section class="card fade-in">
       <h1 class="lang lang-en">Services</h1>
       <ul class="service-list">
         <li>
-          <strong class="lang lang-en">General medicine</strong>
+          <strong class="lang lang-en">🩺 General medicine</strong>
           <p class="muted lang lang-en">All family medicine services</p>
         </li>
         <li>
-          <strong class="lang lang-en">Vaccination</strong>
+          <strong class="lang lang-en">💉 Vaccination</strong>
           <p class="muted lang lang-en">Children and adults</p>
         </li>
         <li>
-          <strong class="lang lang-en">Laboratory diagnostics</strong>
+          <strong class="lang lang-en">🔬 Laboratory diagnostics</strong>
           <p class="muted lang lang-en">Hematological and Biochemical</p>
         </li>
         <li>
-          <strong class="lang lang-en">Ultrasound examinations</strong>
+          <strong class="lang lang-en">📡 Ultrasound examinations</strong>
           <p class="muted lang lang-en">Abdomen and Thyroid gland</p>
         </li>
         <li>
-          <strong class="lang lang-en">General dentistry services</strong>
+          <strong class="lang lang-en">🦷 General dentistry services</strong>
           <p class="muted lang lang-en">Prevention, diagnosis and dental treatment</p>
         </li>
         <li>
-          <strong class="lang lang-en">Emergency medical services and ambulance transport</strong>
+          <strong class="lang lang-en">🚑 Emergency medical services and ambulance transport</strong>
           <p class="muted lang lang-en">Emergency care and patient transport</p>
         </li>
-
 
       </ul>
     </section>
 
-
   </main>
 
-
   <footer class="site-footer container">
-    <small class="muted">© 
+    <small class="muted">©
       <span id="year"></span> <span class="lang lang-en">Drinić Medical Centre</span>.</small>
   </footer>
+
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

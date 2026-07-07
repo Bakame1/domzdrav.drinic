@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>O nama | About</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -19,7 +23,10 @@
       <a href="index.html"><span class="lang lang-bs">Početna</span></a>
       <a class="active" href="about.html"><span class="lang lang-bs">O nama</span></a>
       <a href="services.html"><span class="lang lang-bs">Usluge</span></a>
-      <a href="contact.html"><span class="lang lang-bs">Kontakt</span></a>     
+      <a href="contact.html"><span class="lang lang-bs">Kontakt</span></a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="about_eng.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"  >
@@ -29,11 +36,11 @@
   </header>
 
   <main class="container stack-lg">
-    <section class="card">
+    <section class="card fade-in">
       <h1 class="lang lang-bs">O nama</h1>
 
       <p class="lang lang-bs">JZU DZ Drinić osnovan je 2000. godine, u novonastaloj opštini Petrovac, sa sjedištem u Driniću.</p>
-      
+
       <p class="lang lang-bs">Od svog nastanka pokriva primarnom zdravstvenom zaštitom područje opštine Petrovac i dijelove okolnih opština Bosanski Petrovac i Drvar.</p>
 
       <p class="lang lang-bs">Registrovan je jedan tim porodične medicine sa oko 1900 korisnika primarne zdravstvene zaštite.</p>
@@ -45,10 +52,12 @@
   </main>
 
   <footer class="site-footer container">
-    <small class="muted">© <span id="year"></span> 
+    <small class="muted">© <span id="year"></span>
       <span class="lang lang-bs">Dom zdravlja Drinić</span>
     </small>
   </footer>
-  
+
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

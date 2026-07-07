@@ -7,6 +7,10 @@
   <meta name="description" content="Dom zdravlja / Medical Centre. Jednostavan, pregledan sajt. Simple, ergonomic clinic website." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -21,36 +25,42 @@
       <a class="active" href="index.html"><span class="lang lang-bs">Početna</span></a>
       <a href="about.html"><span class="lang lang-bs">O nama</span></a>
       <a href="services.html"><span class="lang lang-bs">Usluge</span></a>
-      <a href="contact.html"><span class="lang lang-bs">Kontakt</span></a>      
-      
+      <a href="contact.html"><span class="lang lang-bs">Kontakt</span></a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="index_eng.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"  >
         </span>
-
       </a>
     </nav>
   </header>
 
   <main class="container stack-lg">
-    <section class="hero card">
+    <section class="hero card fade-in">
       <h1 class="lang lang-bs" id="Welcome">Dobrodošli u Dom zdravlja Drinić</h1>
+      <p class="lead lang lang-bs">Vaš pouzdani partner u brizi o zdravlju od 2000. godine</p>
+      <div class="actions">
+        <a href="contact.html" class="btn-primary lang lang-bs">📞 Kontaktirajte nas</a>
+        <a href="services.html" class="btn-secondary lang lang-bs">Naše usluge →</a>
+      </div>
     </section>
 
-    <section class="grid-2 card">
+    <section class="grid-2 card fade-in">
       <div>
         <h2 class="lang lang-bs">Radno vrijeme</h2>
-        
+
         <p>
           <strong class="lang lang-bs">Laboratorija i ambulanta porodične medicine :</strong><br />
           <span class="lang lang-bs">
-          => Svaki radni dan : 7:00 - 15:00 
+          => Svaki radni dan : 7:00 - 15:00
           </span>
         </p>
 
         <p>
           <strong class="lang lang-bs">Hitna medicinska pomoć :</strong><br />
-          
+
           <span class="lang lang-bs">
           => Radni dan : 15:00 - 7:00 <br/>
           => Vikendi i praznici : 24/24<br/>
@@ -59,17 +69,12 @@
 
         <p>
           <strong class="lang lang-bs">Stomatološka ambulanta :</strong><br />
-          
+
           <span class="lang lang-bs">
           => subotu : 8:00 - 15:00
           </span>
         </p>
 
-          
-          
-            
-          
-        
       </div>
       <div>
         <h2 class="lang lang-bs">Adresa</h2>
@@ -79,7 +84,7 @@
       </div>
     </section>
 
-    <section id="map" class="card">
+    <section id="map" class="card fade-in">
       <h2 class="lang lang-bs">Lokacija</h2>
       <div class="map-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30490.2373747614!2d16.444908968033257!3d44.50621079407327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4760f3c82a17f0cf%3A0xfedbb682baba666b!2sDom%20zdravlja%20Drini%C4%87!5e0!3m2!1sfr!2sba!4v1755786088622!5m2!1sfr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -88,11 +93,13 @@
   </main>
 
   <footer class="site-footer container">
-    <small class="muted">© <span id="year"></span> 
-      <span class="lang lang-bs">Dom zdravlja Drinić</span>. 
+    <small class="muted">© <span id="year"></span>
+      <span class="lang lang-bs">Dom zdravlja Drinić</span>.
       <span class="lang lang-bs">Sva prava zadržana.</span>
     </small>
   </footer>
 
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

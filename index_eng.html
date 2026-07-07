@@ -7,6 +7,10 @@
   <meta name="description" content="Medical Centre / Dom zdravlja. Simple, ergonomic clinic website. Jednostavan, pregledan sajt." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" />
+
+  <script>/* Apply saved theme before paint */
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
+  </script>
 </head>
 <body>
   <header class="site-header container">
@@ -21,8 +25,10 @@
       <a class="active" href="index_eng.html"><span class="lang lang-en">Home</span></a>
       <a href="about_eng.html"><span class="lang lang-en">About us</span></a>
       <a href="services_eng.html"><span class="lang lang-en">Services</span></a>
-      <a href="contact_eng.html"><span class="lang lang-en">Contact</span></a>      
-      
+      <a href="contact_eng.html"><span class="lang lang-en">Contact</span></a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
+
       <a href="index.html" class="translate_in_eng_or_bs">
         <span class="flag-icon">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/1920px-Flag_of_Bosnia_and_Herzegovina.svg.png"  >
@@ -31,49 +37,44 @@
     </nav>
   </header>
 
-
   <main class="container stack-lg">
-    <section class="hero card">
+    <section class="hero card fade-in">
       <h1 class="lang lang-en" id="Welcome">Welcome to Drinić Medical Centre</h1>
+      <p class="lead lang lang-en">Your trusted healthcare partner since 2000</p>
+      <div class="actions">
+        <a href="contact_eng.html" class="btn-primary lang lang-en">📞 Contact us</a>
+        <a href="services_eng.html" class="btn-secondary lang lang-en">Our services →</a>
+      </div>
     </section>
 
-
-    <section class="grid-2 card">
+    <section class="grid-2 card fade-in">
       <div>
         <h2 class="lang lang-en">Working Hours</h2>
-        
+
         <p>
           <strong class="lang lang-en">Laboratory and family medicine clinic:</strong><br />
           <span class="lang lang-en">
-          => Every working day: 7:00 AM - 3:00 PM 
+          => Every working day: 7:00 AM - 3:00 PM
           </span>
         </p>
 
-
         <p>
           <strong class="lang lang-en">Emergency medical services:</strong><br />
-          
+
           <span class="lang lang-en">
           => Working days: 3:00 PM - 7:00 AM <br/>
           => Weekends and holidays: 24/7<br/>
           </span>
         </p>
 
-
         <p>
           <strong class="lang lang-en">Dental clinic:</strong><br />
-          
+
           <span class="lang lang-en">
           => Saturday: 8:00 AM - 3:00 PM
           </span>
         </p>
 
-
-          
-          
-            
-          
-        
       </div>
       <div>
         <h2 class="lang lang-en">Address</h2>
@@ -83,8 +84,7 @@
       </div>
     </section>
 
-
-    <section id="map" class="card">
+    <section id="map" class="card fade-in">
       <h2 class="lang lang-en">Location</h2>
       <div class="map-wrap">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30490.2373747614!2d16.444908968033257!3d44.50621079407327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4760f3c82a17f0cf%3A0xfedbb682baba666b!2sDom%20zdravlja%20Drini%C4%87!5e0!3m2!1sfr!2sba!4v1755786088622!5m2!1sfr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -92,14 +92,14 @@
     </section>
   </main>
 
-
   <footer class="site-footer container">
-    <small class="muted">© <span id="year"></span> 
-      <span class="lang lang-en">Drinić Medical Centre</span>. 
+    <small class="muted">© <span id="year"></span>
+      <span class="lang lang-en">Drinić Medical Centre</span>.
       <span class="lang lang-en">All rights reserved.</span>
     </small>
   </footer>
 
-
+  <script src="theme.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>
