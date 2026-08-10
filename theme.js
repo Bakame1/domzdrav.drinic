@@ -1,4 +1,5 @@
 // Theme toggle — persists choice in localStorage
+// Apple Design §12: smooth theme transition via temporary class
 (function () {
   const STORAGE_KEY = 'theme';
 
@@ -30,9 +31,18 @@
 
     btn.addEventListener('click', function () {
       const next = isDark() ? 'light' : 'dark';
+
+      // Apple Design: add transitioning class for smooth theme change
+      document.body.classList.add('theme-transitioning');
+
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem(STORAGE_KEY, next);
       updateIcon();
+
+      // Remove transitioning class after the transition completes
+      setTimeout(function () {
+        document.body.classList.remove('theme-transitioning');
+      }, 500);
     });
   });
 })();

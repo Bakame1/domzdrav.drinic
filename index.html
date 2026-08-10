@@ -33,13 +33,12 @@
   </script>
 
   <script>/* Apply saved theme before paint */
-  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
-  </script>
+  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
   <header class="site-header container">
     <a class="brand" href="index.html" aria-label="Home">
-      <div class="logo" aria-hidden="true">🩺</div>
+      <div class="logo" aria-hidden="true"><img src="logos/logo_DZD.png" alt="" class="logo-img"></div>
       <div class="brand-text">
         <strong class="lang lang-bs">JZU Dom zdravlja Drinić</strong>
         <span class="muted lang lang-bs">Briga o vašem zdravlju</span>
@@ -71,40 +70,73 @@
       </div>
     </section>
 
+    <!-- Quick stats -->
+    <section class="fade-in">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-icon" aria-hidden="true">🏥</span>
+          <div class="stat-value">2000</div>
+          <div class="stat-label lang lang-bs">Osnovano</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" aria-hidden="true">👥</span>
+          <div class="stat-value">1.900</div>
+          <div class="stat-label lang lang-bs">Korisnika</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" aria-hidden="true">🧑‍⚕️</span>
+          <div class="stat-value">8</div>
+          <div class="stat-label lang lang-bs">Zaposlenih</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon" aria-hidden="true">🦷</span>
+          <div class="stat-value">6</div>
+          <div class="stat-label lang lang-bs">Usluga</div>
+        </div>
+      </div>
+    </section>
+
     <section class="grid-2 card fade-in">
       <div>
         <h2 class="lang lang-bs">Radno vrijeme</h2>
 
         <p>
-          <strong class="lang lang-bs">Laboratorija i ambulanta porodične medicine :</strong><br />
-          <span class="lang lang-bs">
-          => Svaki radni dan : 7:00 - 15:00
-          </span>
+          <strong class="lang lang-bs">🕐 Laboratorija i ambulanta porodične medicine:</strong>
         </p>
+        <div class="schedule-item">
+          <span class="schedule-icon" aria-hidden="true">📅</span>
+          <span class="schedule-text lang lang-bs">Svaki radni dan: <time>7:00</time> – <time>15:00</time></span>
+        </div>
 
         <p>
-          <strong class="lang lang-bs">Hitna medicinska pomoć :</strong><br />
-
-          <span class="lang lang-bs">
-          => Radni dan : 15:00 - 7:00 <br/>
-          => Vikendi i praznici : 24/24<br/>
-          </span>
+          <strong class="lang lang-bs">🚨 Hitna medicinska pomoć:</strong>
         </p>
+        <div class="schedule-item">
+          <span class="schedule-icon" aria-hidden="true">📅</span>
+          <span class="schedule-text lang lang-bs">Radni dan: <time>15:00</time> – <time>7:00</time></span>
+        </div>
+        <div class="schedule-item">
+          <span class="schedule-icon" aria-hidden="true">🔄</span>
+          <span class="schedule-text lang lang-bs">Vikendi i praznici: 24/24</span>
+        </div>
 
         <p>
-          <strong class="lang lang-bs">Stomatološka ambulanta :</strong><br />
-
-          <span class="lang lang-bs">
-          => subotu : 8:00 - 15:00
-          </span>
+          <strong class="lang lang-bs">🦷 Stomatološka ambulanta:</strong>
         </p>
+        <div class="schedule-item">
+          <span class="schedule-icon" aria-hidden="true">📅</span>
+          <span class="schedule-text lang lang-bs">Subotu: <time>8:00</time> – <time>15:00</time></span>
+        </div>
 
       </div>
       <div>
         <h2 class="lang lang-bs">Adresa</h2>
-        <p>
-          <span class="lang lang-bs">Centar 15, Drinić, Bosna i Hercegovina</span>
-        </p>
+        <address>
+          <div class="schedule-item">
+            <span class="schedule-icon" aria-hidden="true">📍</span>
+            <span class="schedule-text lang lang-bs">Centar 15, Drinić, Bosna i Hercegovina</span>
+          </div>
+        </address>
       </div>
     </section>
 
