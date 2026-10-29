@@ -435,6 +435,10 @@ p strong {
   transition: transform var(--apple-duration) var(--apple-ease);
 }
 
+.facebook-button svg {
+  margin-right: 8px;
+}
+
 .facebook-button:hover i {
   transform: rotate(360deg);
 }
@@ -661,6 +665,34 @@ p strong {
   border: 0;
 }
 
+/* Map consent overlay */
+.map-consent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 16px;
+}
+
+.map-consent p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  max-width: 36ch;
+}
+
+.map-consent a {
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
 /* ===== Contact Page Specific ===== */
 .contact.grid-2 {
   align-items: start;
@@ -718,6 +750,28 @@ p strong {
 .site-footer {
   padding: 28px 0;
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  color: var(--color_text_2);
+  text-decoration: none;
+  transition: color var(--apple-duration) var(--apple-ease);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
 }
 
 .muted {

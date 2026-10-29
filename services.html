@@ -6,10 +6,7 @@
   <title>Usluge | Services</title>
   <link rel="icon" type="image/png" href="logos/logo_DZD.png" />
   <link rel="stylesheet" href="styles.css" />
-
-  <script>/* Apply saved theme before paint */
-  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
-  </script>
+  <script src="theme.js"></script>
 </head>
 <body>
   <header class="site-header container">
@@ -28,9 +25,9 @@
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
 
-      <a href="services_eng.html" class="translate_in_eng_or_bs">
+      <a href="services_eng.html" class="translate_in_eng_or_bs" lang="en" hreflang="en" aria-label="English version">
         <span class="flag-icon">
-        <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"  >
+        <img src="logos/flags/gb.svg" alt="" width="32" height="22">
         </span>
       </a>
     </nav>
@@ -73,9 +70,12 @@
   <footer class="site-footer container">
     <small class="muted">©
       <span id="year"></span> <span class="lang lang-bs">Dom zdravlja Drinić</span>.</small>
+    <nav class="footer-links">
+      <a href="privacy.html">Politika privatnosti</a>
+      <a href="legal.html">Pravne napomene</a>
+    </nav>
   </footer>
 
-  <script src="theme.js"></script>
   <script src="animations.js"></script>
 </body>
 </html>

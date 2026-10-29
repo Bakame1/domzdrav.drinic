@@ -6,10 +6,7 @@
   <title>Kontakt | Contact</title>
   <link rel="icon" type="image/png" href="logos/logo_DZD.png" />
   <link rel="stylesheet" href="styles.css" />
-
-  <script>/* Apply saved theme before paint */
-  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})()
-  </script>
+  <script src="theme.js"></script>
 </head>
 <body>
   <header class="site-header container">
@@ -28,9 +25,9 @@
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
 
-      <a href="contact_eng.html" class="translate_in_eng_or_bs">
+      <a href="contact_eng.html" class="translate_in_eng_or_bs" lang="en" hreflang="en" aria-label="English version">
         <span class="flag-icon">
-        <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"  >
+        <img src="logos/flags/gb.svg" alt="" width="32" height="22">
         </span>
       </a>
 
@@ -46,11 +43,10 @@
             <div class="contact-list">
             <strong >Telefon</strong><br />
 
-            Porodicne medicine : <b>050465006</b> <br/>
-            Hitne medicinske pomoci : <b>050465006</b><br/>
-            Telefon i fax : <b>050465007</b><br/>
-            Laboratorijska dijagnostika : <b>050465052</b> <br/>
-            </span>
+            Porodične medicine : <a href="tel:+38750465006"><b>050 465 006</b></a> <br/>
+            Hitne medicinske pomoći : <a href="tel:+38750465006"><b>050 465 006</b></a><br/>
+            Telefon i fax : <a href="tel:+38750465007"><b>050 465 007</b></a><br/>
+            Laboratorijska dijagnostika : <a href="tel:+38750465052"><b>050 465 052</b></a> <br/>
             </div>
 
 
@@ -81,8 +77,8 @@
 
         <div class="contact-list">
             <strong class="lang lang-bs">Facebook stranica</strong><br />
-            <a href="https://www.facebook.com/domzdravljapetrovac" class="facebook-button" target="_blank">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook
+            <a href="https://www.facebook.com/domzdravljapetrovac" class="facebook-button" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook
             </a><br />
         </div>
 
@@ -128,9 +124,12 @@
     <small class="muted">© <span id="year"></span>
        <span class="lang lang-bs">Dom zdravlja Drinić</span>
     </small>
+    <nav class="footer-links">
+      <a href="privacy.html">Politika privatnosti</a>
+      <a href="legal.html">Pravne napomene</a>
+    </nav>
   </footer>
 
-  <script src="theme.js"></script>
   <script src="animations.js"></script>
 </body>
 </html>

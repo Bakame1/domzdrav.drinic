@@ -36,4 +36,20 @@
     <loc>https://bakame1.github.io/domzdrav.drinic/contact_eng.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://bakame1.github.io/domzdrav.drinic/privacy.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bakame1.github.io/domzdrav.drinic/privacy_eng.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bakame1.github.io/domzdrav.drinic/legal.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://bakame1.github.io/domzdrav.drinic/legal_eng.html</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>

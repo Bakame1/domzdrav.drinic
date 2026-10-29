@@ -34,9 +34,7 @@
     "url": "https://bakame1.github.io/domzdrav.drinic/"
   }
   </script>
-
-  <script>/* Apply saved theme before paint */
-    (function () { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); })()</script>
+  <script src="theme.js"></script>
 </head>
 
 <body>
@@ -56,10 +54,9 @@
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">🌙</button>
 
-      <a href="index_eng.html" class="translate_in_eng_or_bs">
+      <a href="index_eng.html" class="translate_in_eng_or_bs" lang="en" hreflang="en" aria-label="English version">
         <span class="flag-icon">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-1920px-Flag_of_the_United_Kingdom_%283-5%29.svg.png">
+          <img src="logos/flags/gb.svg" alt="" width="32" height="22">
         </span>
       </a>
     </nav>
@@ -148,10 +145,11 @@
     <section id="map" class="card fade-in">
       <h2 class="lang lang-bs">Lokacija</h2>
       <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30490.2373747614!2d16.444908968033257!3d44.50621079407327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4760f3c82a17f0cf%3A0xfedbb682baba666b!2sDom%20zdravlja%20Drini%C4%87!5e0!3m2!1sfr!2sba!4v1755786088622!5m2!1sfr!2sba"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-consent">
+          <p>Karta se učitava sa Google-a. Klikom se Google-u šalje vaša IP adresa.</p>
+          <button type="button" id="load-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30490.2373747614!2d16.444908968033257!3d44.50621079407327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4760f3c82a17f0cf%3A0xfedbb682baba666b!2sDom%20zdravlja%20Drini%C4%87!5e0!3m2!1sfr!2sba!4v1755786088622!5m2!1sfr!2sba" class="btn-primary">Prikaži kartu</button>
+          <a href="https://www.google.com/maps/place/Dom+zdravlja+Drini%C4%87" target="_blank" rel="noopener noreferrer">Otvori u Google Mapsu</a>
+        </div>
       </div>
     </section>
   </main>
@@ -161,10 +159,14 @@
       <span class="lang lang-bs">Dom zdravlja Drinić</span>.
       <span class="lang lang-bs">Sva prava zadržana.</span>
     </small>
+    <nav class="footer-links">
+      <a href="privacy.html">Politika privatnosti</a>
+      <a href="legal.html">Pravne napomene</a>
+    </nav>
   </footer>
 
-  <script src="theme.js"></script>
   <script src="animations.js"></script>
+  <script src="map.js"></script>
 </body>
 
 </html>

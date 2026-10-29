@@ -4,12 +4,16 @@
   const STORAGE_KEY = 'theme';
 
   // Apply saved theme immediately (before paint) to avoid flash
-  const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved) {
-    document.documentElement.setAttribute('data-theme', saved);
-  }
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  } catch (e) { /* localStorage unavailable (private browsing, etc.) */ }
 
   document.addEventListener('DOMContentLoaded', function () {
+    var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
     const btn = document.getElementById('theme-toggle');
     if (!btn) return;
 
@@ -36,7 +40,7 @@
       document.body.classList.add('theme-transitioning');
 
       document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem(STORAGE_KEY, next);
+      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* ignore */ }
       updateIcon();
 
       // Remove transitioning class after the transition completes
