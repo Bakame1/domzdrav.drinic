@@ -676,8 +676,8 @@ p strong {
   gap: 12px;
   padding: 24px;
   text-align: center;
-  background: var(--surface);
-  color: var(--text);
+  background: var(--section_col);
+  color: var(--color_text);
   border-radius: 16px;
 }
 
@@ -690,7 +690,7 @@ p strong {
 
 .map-consent a {
   font-size: 0.875rem;
-  color: var(--accent);
+  color: var(--color_text_2);
 }
 
 /* ===== Contact Page Specific ===== */
@@ -771,11 +771,33 @@ p strong {
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .muted {
   color: var(--color_text_2);
+}
+
+/* ===== 404 Error Page ===== */
+.error-page {
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.error-code {
+  font-size: clamp(4rem, 10vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color_text_2);
+  margin-bottom: 12px;
+}
+
+.error-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--border);
+  margin: 28px auto;
+  border: none;
 }
 
 /* ===== Language Visibility ===== */
@@ -822,6 +844,12 @@ section img:not(.logo-img) {
   margin: 8px;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* Keyboard navigation accessibility */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .link-btn:focus {
